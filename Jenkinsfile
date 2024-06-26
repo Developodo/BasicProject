@@ -24,7 +24,8 @@ pipeline {
                 script {
   // Utilizar ncftp para transferir archivos al servidor FTP
 sh '''
-                        ncftpput -R -v -u ${FTP_USER} -p ${FTP_PASS} ${FTP_HOST} ${FTP_DIR} ./build
+			cd build
+                        ncftpput -R -v -u ${FTP_USER} -p ${FTP_PASS} ${FTP_HOST} ${FTP_DIR} .
                     '''
 		}
             }

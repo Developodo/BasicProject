@@ -1,0 +1,13 @@
+{
+  "name": "my-simulated-project",
+  "version": "1.0.0",
+  "description": "A simulated project for Jenkins pipeline",
+  "main": "index.js",
+  "scripts": {
+    "install": "echo 'Simulating npm install'",
+    "build": "echo 'Simulating npm build' && mkdir -p build && cp -r src/* build/"
+  },
+  "author": "Carlos Serrano",
+  "license": "ISC"
+}
+

@@ -5,7 +5,7 @@ pipeline {
         FTP_HOST = 'apache-ftp'
         FTP_USER = 'user'
         FTP_PASS = 'password'
-        FTP_DIR = '/var/www/html/app'
+        FTP_DIR = './'
     }
 
     stages {

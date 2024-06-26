@@ -22,15 +22,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    // Utilizar lftp para transferir archivos al servidor FTP
+  // Utilizar ncftp para transferir archivos al servidor FTP
                     sh """
-                        lftp -e "
-                        open -u $FTP_USER,$FTP_PASS $FTP_HOST;
-                        mirror -R ./build $FTP_DIR;
-                        bye
-                        "
-                    """
-                }
+                        ncftpput -R -v -u $FTP_USER -p $FTP_PASS $FTP_HOST 
+$FTP_DIR build/*
+                    """                }
             }
         }
     }
